@@ -1,0 +1,72 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #050505 0%, #0F0F0F 100%);
+  color: #FFFFFF;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFD700;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFA500;
+}
+
+/* Glass Morphism Effect */
+.glass {
+  background: rgba(255, 215, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* Gold Glow Effect */
+.glow-gold {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), 0 0 40px rgba(255, 215, 0, 0.2);
+}
+
+/* Smooth Transitions */
+.smooth-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Button Styles */
+.btn-kingdom {
+  @apply px-6 py-3 bg-gradient-kingdom text-kingdom-darker font-bold rounded-lg smooth-transition hover:shadow-kingdom-lg transform hover:scale-105 active:scale-95;
+}
+
+.btn-kingdom-dark {
+  @apply px-6 py-3 bg-kingdom-card border border-kingdom-gold text-kingdom-gold font-bold rounded-lg smooth-transition hover:bg-kingdom-gold hover:text-kingdom-darker active:scale-95;
+}
+
+/* Input Styles */
+.input-kingdom {
+  @apply px-4 py-3 bg-kingdom-card border border-kingdom-border rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-kingdom-gold focus:shadow-kingdom smooth-transition;
+}
+
+/* Card Styles */
+.card-kingdom {
+  @apply bg-kingdom-card border border-kingdom-border rounded-xl p-4 smooth-transition hover:border-kingdom-gold hover:shadow-kingdom;
+}
